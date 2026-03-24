@@ -9,7 +9,7 @@ for (let i = 0; i < 4; i++) { // cols
     button.dataset.col = i;
 
     button.addEventListener("click", () => {
-        button.classList.add("active");
+        button.classList.toggle("active");
     });
 
     keypad.appendChild(button);
