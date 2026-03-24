@@ -2,12 +2,30 @@ body {
     margin: 0;
 }
 
+.wrapper {
+    max-inline-size: 500px;
+    margin-inline: auto;
+    padding: 1rem;
+}
+
 .keypad {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    place-items: center;
+    grid-gap: 1rem;
+
+    border: solid black 1px;
+    background-color: lightgray;
+    padding: 5px;
 }
 
 .button {
-    border: black;
+    background-color: white;
+    border: black solid 1px;
     width: 100px;
     height: 100px;
+}
+
+.active {
+    background-color: orange;
 }

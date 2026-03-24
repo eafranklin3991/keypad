@@ -8,6 +8,10 @@ for (let i = 0; i < 4; i++) { // cols
     button.dataset.row = j;
     button.dataset.col = i;
 
+    button.addEventListener("click", () => {
+        button.classList.add("active");
+    });
+
     keypad.appendChild(button);
     }
 }
