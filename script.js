@@ -1,17 +1,14 @@
 const keypad = document.querySelector(".keypad");
 
-// Create keypad buttons
-for (let i = 0; i < 4; i++) { // rows
-    for (let j = 0; j < 3; j++) { // cols
+// Create keypad buttons with ids
+for (let i = 0; i < 6; i++) {
     const button = document.createElement("div");
     button.classList.add("button");
-    button.dataset.col = j;
-    button.dataset.row = i;
+    button.dataset.id = i;
 
     button.addEventListener("click", () => {
         button.classList.toggle("active");
     });
 
     keypad.appendChild(button);
-    }
 }
