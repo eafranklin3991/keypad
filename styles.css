@@ -1,0 +1,13 @@
+body {
+    margin: 0;
+}
+
+.keypad {
+    display: flex;
+}
+
+.button {
+    border: black;
+    width: 100px;
+    height: 100px;
+}
