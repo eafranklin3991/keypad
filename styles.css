@@ -65,7 +65,6 @@ body {
 
 .active {
     background: linear-gradient(145deg, #e8a020, #c47a10);
-    color: #fff;
     box-shadow:
         0 6px 0 #7a4500,
         0 8px 6px rgba(0,0,0,0.4),
