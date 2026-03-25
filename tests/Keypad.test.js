@@ -10,3 +10,17 @@ test("keypad generates random code", () => {
     const keypad2 = new Keypad();
     expect(keypad1.passCode).not.toEqual(keypad2.passCode);
 })
+
+test("numbers are between 0 and 5", () => {
+    const keypad = new Keypad();
+    keypad.passCode.forEach(num => {
+        expect(num).toBeGreaterThanOrEqual(0);
+        expect(num).toBeLessThanOrEqual(5);
+    });
+});
+
+test("numbers don't repeat", () => {
+    const keypad = new Keypad();
+    const unique = new Set(keypad.passCode);
+    expect(unique.size).toBe(keypad.passCode.length);
+});

@@ -6,9 +6,12 @@ class Keypad {
 
     genRandCode() {
         const passCode = [];
+        const arr = [0,1,2,3,4,5];
         for (let i = 0; i < 6; i++) {
-            let num = Math.floor(Math.random() * 10);
+            let randIndex = Math.floor(Math.random() * arr.length);
+            let num = arr[randIndex];
             passCode.push(num);
+            arr.splice(randIndex, 1);
         }
 
         this.passCode = passCode;
