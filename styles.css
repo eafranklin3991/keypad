@@ -1,31 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
 body {
     margin: 0;
+    min-height: 100vh;
+    background-color: #1a1a1a;
+    display: grid;
+    place-items: center;
+    font-family: 'Share Tech Mono', monospace;
 }
 
 .wrapper {
     max-inline-size: 500px;
     margin-inline: auto;
     padding: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
 }
 
 .keypad {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     place-items: center;
-    grid-gap: 1rem;
-
-    border: solid black 1px;
-    background-color: lightgray;
-    padding: 5px;
+    gap: 12px;
+    background: #2a2a2a;
+    border: 2px solid #444;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow:
+        0 0 0 1px #111,
+        0 8px 32px rgba(0,0,0,0.6),
+        inset 0 1px 0 rgba(255,255,255,0.05);
 }
 
 .button {
-    background-color: white;
-    border: black solid 1px;
-    width: 100px;
-    height: 100px;
+    width: 90px;
+    height: 90px;
+    background: linear-gradient(145deg, #3a3a3a, #2a2a2a);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+    display: grid;
+    place-items: center;
+    color: #aaa;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 1.4rem;
+
+    /* Raised 3D effect */
+    box-shadow:
+        0 6px 0 #111,
+        0 8px 6px rgba(0,0,0,0.4),
+        inset 0 1px 0 rgba(255,255,255,0.1);
+
+    transition: box-shadow 0.08s ease, transform 0.08s ease, background 0.15s ease, color 0.15s ease;
+    user-select: none;
+}
+
+.button:active {
+    transform: translateY(4px);
+    box-shadow:
+        0 2px 0 #111,
+        0 3px 4px rgba(0,0,0,0.4),
+        inset 0 1px 0 rgba(255,255,255,0.05);
 }
 
 .active {
-    background-color: orange;
+    background: linear-gradient(145deg, #e8a020, #c47a10);
+    color: #fff;
+    box-shadow:
+        0 6px 0 #7a4500,
+        0 8px 6px rgba(0,0,0,0.4),
+        0 0 20px rgba(220, 140, 20, 0.4),
+        inset 0 1px 0 rgba(255,255,255,0.2);
+}
+
+.status-text {
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
 }

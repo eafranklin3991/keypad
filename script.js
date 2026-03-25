@@ -2,6 +2,7 @@ import Keypad from "./classes/Keypad.js";
 
 const keypad = document.querySelector(".keypad");
 const passCode = new Keypad().passCode;
+const statusText = document.querySelector(".status-text");
 let currentStep = 0;
 
 // Create keypad buttons with ids
@@ -20,7 +21,7 @@ for (let i = 0; i < 6; i++) {
 
             if (currentStep === passCode.length) {
                 // All buttons pressed correct order
-                console.log("Access granted!");
+                statusText.textContent = "Access granted!";
                 currentStep = 0;
             }
 
