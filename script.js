@@ -31,6 +31,7 @@ for (let i = 0; i < 6; i++) {
                 btn.classList.remove("active");
             });
             currentStep = 0;
+            statusText.textContent = "";
         }
     });
 
