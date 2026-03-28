@@ -37,5 +37,3 @@ for (let i = 0; i < 6; i++) {
 
     keypad.appendChild(button);
 }
-
-console.log(passCode);
